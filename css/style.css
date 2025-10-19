@@ -1,0 +1,273 @@
+/* ======================================
+CSS RESETS
+====================================== */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======================================
+PAUSE BUTTON
+====================================== */
+
+.pause-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    padding-top: 0;
+    font-size: 1.8em;
+    background: transparent;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.pause-button:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================
+WHITE FADE
+====================================== */
+
+.white-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    z-index: 50;
+    pointer-events: none;
+    transition: opacity 1.5s ease;
+}
+
+.white-fade.active {
+    opacity: 1;
+}
+
+/* ======================================
+VIDEO
+====================================== */
+.backstage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: -25%;
+    animation: walking 15s infinite alternate;
+}
+
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: opacity 0.05s ease;
+}
+
+.video-player.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.video-player:not(.active) {
+    opacity: 0;
+    z-index: 0;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+@keyframes walking {
+    0% {
+        margin-left: -25%;
+    }
+
+    100% {
+        margin-left: -28%;
+    }
+}
+
+.event-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 2;
+}
+
+/* ======================================
+BUTTONS, TIMER, AND VOTE COUNT
+====================================== */
+
+.voting-section {
+    font-family: "Outfit", sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    overflow: visible;
+    animation: fadeInSection 0.6s ease-in forwards;
+    z-index: 10;
+}
+
+@keyframes hideaway {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100vw;
+    }
+}
+
+/* Status Message */
+p {
+    position: fixed;
+    padding-top: 5px;
+    color: rgb(91, 91, 91);
+    font-size: 1.2em;
+    width: 150px;
+}
+
+/* Timer */
+h1 {
+    font-size: 4em;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.voting-buttons {
+    display: grid;
+    padding-top: 100px;
+    gap: 150px;
+    width: 600px;
+    margin-left: -300px;
+    margin-bottom: 30px;
+}
+
+.button-effect {
+    height: 100px;
+    position: relative;
+    animation: slideInRight 0.6s ease-out backwards;
+}
+
+.button-effect:hover:before {
+    opacity: 1;
+    transform: scale(1.15) translateX(3.5%);
+}
+
+.button-effect:before {
+    background: linear-gradient(25deg,
+            transparent 5%,
+            rgb(255, 215, 137) 0,
+            transparent 99%);
+    border-radius: 200px 0 0 200px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 300ms, transform 250ms;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.button-effect:hover>.button-cover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.button-cover {
+    font-family: "Merriweather Sans", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    border-radius: 100px 0 0 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.4;
+    transition: transform 250ms, opacity 250ms;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}
+
+/* Staggered animation delays */
+.button-effect:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.button-effect:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.button-effect:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Slide in animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
