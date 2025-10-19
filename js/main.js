@@ -9,25 +9,25 @@ const gameData = {
 
     // == Kid round ==
     start: {
-        entryVideo: "../assets/kid_entrance.mp4",
-        walkVideo: "../assets/kid_running.mp4",
+        entryVideo: "assets/kid_entrance.mp4",
+        walkVideo: "assets/kid_running.mp4",
         options: [
             {
                 id: 'a',
                 text: "Path of Information",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "knowledge_path"
             },
             {
                 id: 'b',
                 text: "Path of Connection",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "connection_path"
             },
             {
                 id: 'c',
                 text: "Path of Expression",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "expression_path"
             }
         ]
@@ -35,25 +35,25 @@ const gameData = {
 
     // == Studious teen round ==
     knowledge_path: {
-        entryVideo: "../assets/kid_entrance.mp4",
-        walkVideo: "../assets/teen_walk.mp4",
+        entryVideo: "assets/kid_entrance.mp4",
+        walkVideo: "assets/teen_walk.mp4",
         options: [
             {
                 id: 'a',
                 text: "Path of Excellence",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             },
             {
                 id: 'b',
                 text: "Path of Finance",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             },
             {
                 id: 'c',
                 text: "Path of Pursuit",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             }
         ]
@@ -61,25 +61,25 @@ const gameData = {
 
     // == Social teen round ==
     connection_path: {
-        entryVideo: "../assets/kid_entrance.mp4",
-        walkVideo: "../assets/teen_walk.mp4",
+        entryVideo: "assets/kid_entrance.mp4",
+        walkVideo: "assets/teen_walk.mp4",
         options: [
             {
                 id: 'a',
                 text: "Path of Community",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             },
             {
                 id: 'b',
                 text: "Path of Exploration",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             },
             {
                 id: 'c',
                 text: "Path of Performance",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             }
         ]
@@ -87,25 +87,25 @@ const gameData = {
 
     // == Artsy teen round ==
     expression_path: {
-        entryVideo: "../assets/kid_entrance.mp4",
-        walkVideo: "../assets/teen_walk.mp4",
+        entryVideo: "assets/kid_entrance.mp4",
+        walkVideo: "assets/teen_walk.mp4",
         options: [
             {
                 id: 'a',
                 text: "Path of ",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             },
             {
                 id: 'b',
                 text: "Path of ",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             },
             {
                 id: 'c',
                 text: "Path of ",
-                resultVideo: "../assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_animation.mp4",
                 nextRound: "end"
             }
         ]
