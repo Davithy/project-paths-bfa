@@ -1,4 +1,4 @@
-let VOTING_DURATION = 3; // in seconds
+let VOTING_DURATION = 15; // in seconds
 let isPaused = false;
 
 // ============================================
