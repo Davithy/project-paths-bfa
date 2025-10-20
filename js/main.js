@@ -1,4 +1,4 @@
-let VOTING_DURATION = 15; // in seconds
+let VOTING_DURATION = 3; // in seconds
 let isPaused = false;
 
 // ============================================
@@ -35,8 +35,8 @@ const gameData = {
 
     // == Studious teen round ==
     knowledge_path: {
-        entryVideo: "assets/kid_entrance.mp4",
-        walkVideo: "assets/teen_walk.mp4",
+        entryVideo: "assets/studious_teen_walk.mp4",
+        walkVideo: "assets/studious_teen_walk.mp4",
         options: [
             {
                 id: 'a',
@@ -61,8 +61,8 @@ const gameData = {
 
     // == Social teen round ==
     connection_path: {
-        entryVideo: "assets/kid_entrance.mp4",
-        walkVideo: "assets/teen_walk.mp4",
+        entryVideo: "assets/socialite_teen_walk.mp4",
+        walkVideo: "assets/socialite_teen_walk.mp4",
         options: [
             {
                 id: 'a',
@@ -87,8 +87,8 @@ const gameData = {
 
     // == Artsy teen round ==
     expression_path: {
-        entryVideo: "assets/kid_entrance.mp4",
-        walkVideo: "assets/teen_walk.mp4",
+        entryVideo: "assets/artsy_teen_walk.mp4",
+        walkVideo: "assets/artsy_teen_walk.mp4",
         options: [
             {
                 id: 'a',
@@ -150,7 +150,6 @@ function togglePause() {
 
     if (isPaused) {
         // Pause everything
-        setTimeout(null);
         clearInterval(timerInterval);
         eventVideo.pause();
         document.getElementById('pauseButton').textContent = '\u23F5';
@@ -168,8 +167,6 @@ function togglePause() {
                     endVoting();
                 }
             }, 1000);
-        } else {
-            setTimeout(startVoting, 3000);
         }
 
         document.getElementById('pauseButton').textContent = "\u23F8";
@@ -215,7 +212,7 @@ function playEventVideo(videoPath, isEnding, nearEnd, onComplete) {
     eventVideo.ontimeupdate = function () {
         const timeLeft = eventVideo.duration - eventVideo.currentTime;
 
-        if (timeLeft <= 2 && timeLeft > 1.9) {
+        if (timeLeft <= 2) {
             eventVideo.ontimeupdate = null;
             if (nearEnd) nearEnd();
         }
@@ -248,7 +245,7 @@ function updateVoteCounts() {
 
 function startWalkingPhase() {
     votingSection.classList.add('hidden');
-    pauseButton.classList.remove('hidden');
+    pauseButton.classList.add('hidden');
     statusMessage.textContent = '';
 
     const roundData = gameData[currentRound];
@@ -267,6 +264,7 @@ function startVoting() {
     timeRemaining = VOTING_DURATION;
 
     votingSection.classList.remove('hidden');
+    pauseButton.classList.remove('hidden');
     updateButtonLabels();
     updateVoteCounts();
     statusMessage.textContent = 'Voting...';
