@@ -15,7 +15,7 @@ const gameData = {
             {
                 id: 'a',
                 text: "Path of Information",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/studious_kid_events.webm",
                 nextRound: "knowledge_path"
             },
             {
@@ -281,6 +281,7 @@ function startVoting() {
 }
 
 function vote(optionId) {
+    if (isPaused) return;
     if (!isVoting) return;
     votes[optionId]++;
     updateVoteCounts();
