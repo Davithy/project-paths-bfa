@@ -331,7 +331,6 @@ function playResultScene(winningOption) {
         } else {
             currentRound = winningOption.nextRound;
             setTimeout(startVoting, 3000);
-            pauseButton.classList.remove('hidden');
         }
     };
 
