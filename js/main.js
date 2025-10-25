@@ -339,3 +339,11 @@ function playResultScene(winningOption) {
 }
 
 startWalkingPhase();
+
+document.addEventListener('keydown', function (e) {
+    if (!isVoting) return;
+    
+    if (e.key === 'F13') vote('a');
+    else if (e.key === 'F14') vote('b');
+    else if (e.key === 'F15') vote('c');
+});
