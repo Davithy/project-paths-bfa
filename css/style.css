@@ -252,12 +252,23 @@ h1 {
     color: rgb(255, 255, 255);
     font-size: 3em;
     border-radius: 100px 0 0 100px;
-    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0.4;
     transition: transform 250ms, opacity 250ms;
     cursor: pointer;
     border: none;
     z-index: 1;
+}
+
+#buttonA.button-cover {
+    background-color: rgba(150, 0, 0, 0.5);
+}
+
+#buttonB.button-cover {
+    background-color: rgba(0, 150, 0, 0.5);
+}
+
+#buttonC.button-cover {
+    background-color: rgba(0, 0, 150, 0.5);
 }
 
 /* Staggered animation delays */
