@@ -207,11 +207,28 @@ h1 {
     transform: scale(1.15) translateX(3.5%);
 }
 
-.button-effect:before {
+.button-effect:nth-child(1):before {
     background: linear-gradient(25deg,
             transparent 5%,
-            rgb(255, 215, 137) 0,
+            rgb(231, 66, 66) 0,
             transparent 99%);
+}
+
+.button-effect:nth-child(2):before {
+    background: linear-gradient(25deg,
+            transparent 5%,
+            rgb(66, 231, 66) 0,
+            transparent 99%);
+}
+
+.button-effect:nth-child(3):before {
+    background: linear-gradient(25deg,
+            transparent 5%,
+            rgb(66, 66, 231) 0,
+            transparent 99%);
+}
+
+.button-effect:before {
     border-radius: 200px 0 0 200px;
     content: "";
     position: absolute;
@@ -266,6 +283,16 @@ h1 {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+.button-effect.active:before {
+    opacity: 1;
+    transform: scale(1.15) translateX(3.5%);
+}
+
+.button-cover.clicked {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .hidden {

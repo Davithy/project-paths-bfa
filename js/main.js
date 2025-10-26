@@ -21,13 +21,13 @@ const gameData = {
             {
                 id: 'b',
                 text: "Path of Connection",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/socialite_kid_events.webm",
                 nextRound: "connection_path"
             },
             {
                 id: 'c',
                 text: "Path of Expression",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/artsy_kid_events.webm",
                 nextRound: "expression_path"
             }
         ]
@@ -342,8 +342,27 @@ startWalkingPhase();
 
 document.addEventListener('keydown', function (e) {
     if (!isVoting) return;
-    
-    if (e.key === 'F13') vote('a');
-    else if (e.key === 'F14') vote('b');
-    else if (e.key === 'F15') vote('c');
+    if (isPaused) return;
+
+    let button = null;
+    if (e.key === 'F13') {
+        vote('a');
+        button = buttonA;
+    } else if (e.key === 'F14') {
+        vote('b');
+        button = buttonB;
+    } else if (e.key === 'F15') {
+        vote('c');
+        button = buttonC;
+    }
+
+    if (button) {
+        button.parentElement.classList.add('active');
+        button.classList.add('clicked');
+
+        setTimeout(() => {
+            button.parentElement.classList.remove('active');
+            button.classList.remove('clicked');
+        }, 300);
+    }
 });
