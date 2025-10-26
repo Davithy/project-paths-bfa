@@ -149,17 +149,14 @@ function togglePause() {
     isPaused = !isPaused;
 
     if (isPaused) {
-        // Pause everything
         clearInterval(timerInterval);
         eventVideo.pause();
         document.getElementById('pauseButton').textContent = '\u23F5';
     } else {
-        // Resume everything
         currentVideo.play();
         eventVideo.play();
 
         if (isVoting) {
-            // Resume timer
             timerInterval = setInterval(function () {
                 timeRemaining--;
                 timerDisplay.textContent = timeRemaining;
@@ -275,6 +272,7 @@ function startVoting() {
         timerDisplay.textContent = timeRemaining;
 
         if (timeRemaining <= 0) {
+            pauseButton.classList.add('hidden');
             endVoting();
         }
     }, 1000);
