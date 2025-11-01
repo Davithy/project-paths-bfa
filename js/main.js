@@ -1,4 +1,4 @@
-let VOTING_DURATION = 15; // in seconds
+let VOTING_DURATION = 2; // in seconds
 let isPaused = false;
 
 // ============================================
@@ -41,19 +41,19 @@ const gameData = {
             {
                 id: 'a',
                 text: "Path of Excellence",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/excellence_teen_events.webm",
                 nextRound: "end"
             },
             {
                 id: 'b',
                 text: "Path of Finance",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/finance_teen_events.webm",
                 nextRound: "end"
             },
             {
                 id: 'c',
-                text: "Path of Pursuit",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                text: "Path of Interest",
+                resultVideo: "assets/interest_teen_events.webm",
                 nextRound: "end"
             }
         ]
@@ -67,19 +67,19 @@ const gameData = {
             {
                 id: 'a',
                 text: "Path of Community",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/community_teen_events.webm",
                 nextRound: "end"
             },
             {
                 id: 'b',
                 text: "Path of Exploration",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/exploration_teen_events.webm",
                 nextRound: "end"
             },
             {
                 id: 'c',
                 text: "Path of Performance",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                resultVideo: "assets/performance_teen_events.webm",
                 nextRound: "end"
             }
         ]
@@ -92,20 +92,20 @@ const gameData = {
         options: [
             {
                 id: 'a',
-                text: "Path of ",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                text: "Path of Authenticity",
+                resultVideo: "assets/authenticity_teen_events.webm",
                 nextRound: "end"
             },
             {
                 id: 'b',
-                text: "Path of ",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                text: "Path of Perspective",
+                resultVideo: "assets/perspective_teen_events.webm",
                 nextRound: "end"
             },
             {
                 id: 'c',
-                text: "Path of ",
-                resultVideo: "assets/studious_kid_animation.mp4",
+                text: "Path of Cultivation",
+                resultVideo: "assets/cultivation_teen_events.webm",
                 nextRound: "end"
             }
         ]
