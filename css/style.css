@@ -80,6 +80,7 @@ VIDEO
 ====================================== */
 .backstage {
     position: fixed;
+    background-color: white;
     top: 0;
     left: 0;
     width: 100%;
@@ -190,7 +191,7 @@ h1 {
 .voting-buttons {
     display: grid;
     padding-top: 100px;
-    gap: 150px;
+    gap: 15vh;
     width: 600px;
     margin-left: -300px;
     margin-bottom: 30px;
