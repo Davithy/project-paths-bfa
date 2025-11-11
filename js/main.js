@@ -1,4 +1,4 @@
-let VOTING_DURATION = 5; // in seconds
+let VOTING_DURATION = 10; // in seconds
 let isPaused = false;
 
 // ============================================
@@ -285,11 +285,17 @@ function vote(optionId) {
     updateVoteCounts();
 }
 
+function randVal(){
+  var x = Math.floor(Math.random() * arguments.length);
+  return arguments[x];
+}
+
 function endVoting() {
     isVoting = false;
     clearInterval(timerInterval);
 
-    let winner = 'a';
+    let winner = randVal('a','b','c');
+    if (votes.a > votes[winner]) winner = 'a';
     if (votes.b > votes[winner]) winner = 'b';
     if (votes.c > votes[winner]) winner = 'c';
 
